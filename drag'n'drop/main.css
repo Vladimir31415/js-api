@@ -1,0 +1,26 @@
+body {
+    font-size: 18px;
+}
+.drop-zone {
+    color: grey;
+    width: 450px;
+    height: 300px;
+    text-align: center;
+    border: 3px double black;
+    padding: 10px;
+    margin:10px 0;
+    box-shadow: 0px 0px 4px grey;
+}
+.drop-zone.dragenter {
+    box-shadow: inset 0px 0px 10px green;
+}
+
+.drag-list div{
+    border: 3px outset blue;
+    padding: 10px;
+    display: inline-block;
+}
+.drag-list div.dragged {
+    border-style: inset;
+    color: grey;
+}

@@ -1,0 +1,13 @@
+.preview-block {
+   width: 600px;
+   height: 400px;
+}
+
+.preview-block img {
+    max-width: 100%;
+    border: 5px ridge 
+}
+
+input[type=file] {
+    margin: 10px 0;
+}

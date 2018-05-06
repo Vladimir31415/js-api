@@ -1,0 +1,26 @@
+:-webkit-full-screen {
+    background:#dbdb17;
+}
+
+button {
+    margin: 16px;
+    padding: 16px;
+    width: 232px;
+}
+
+img {
+    width: 500px;
+    margin: 16px;
+}
+
+img:-webkit-full-screen {
+    width: 100%;
+    height: 100%
+}
+
+/* doesn't work */
+button:-webkit-full-screen {
+    display: block;
+    color: violet;
+    font-weight:bold
+}

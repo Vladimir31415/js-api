@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Drag and Drop API</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <h1>Drag and Drop</h1>
+    <div class="drop-zone" 
+        ondragover="dragover_handler(event)"
+        ondrop="drop_handler(event)"
+        ondragenter="dragenter_handler(event)"
+        ondragleave="dragleave_handler(event)">  - DROP ZONE - </div>
+    <div class="drag-list">
+        <div draggable="true" data-uid="48DG" 
+            ondragstart="dragstart_handler(event)"
+            ondragend="dragend_handler(event)">
+            Draggable block</div>
+        <div draggable="true" data-uid=33OP 
+            ondragstart="dragstart_handler(event)"
+            ondragend="dragend_handler(event)">
+            Draggable block</div>
+        <div draggable="false">
+            Non-draggable block</div>
+    </div>
+</body>
+</html>
