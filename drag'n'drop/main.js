@@ -1,24 +1,24 @@
+var draggedElement;
+const img = new Image();
+img.src = 'drag-drop.png';
+
 function dragstart_handler(e) {
+    draggedElement = e.target;
     // define data for dragging
     e.dataTransfer.setData("text/plain", e.target.dataset.uid);
 
     // define allowed drag effects
-    e.dataTransfer.effectAllowed = 'copyLink';
+    e.dataTransfer.effectAllowed = 'moveLink';
     // define default effect
-    e.dataTransfer.dropEffect = "copy";
+    e.dataTransfer.dropEffect = "move";
     
     // set the image which will be shown during dragging
-    const img = new Image();
-    img.src = 'drag-drop.png';
     e.dataTransfer.setDragImage(img, 40, 40);
 }
 
 function dragover_handler(e) {
-    e.preventDefault();
-    if(!e.dataTransfer.getData('text')){
-      e.preventDefault();
-    } 
-    e.dataTransfer.dropEffect = 'link';   
+    e.preventDefault(); 
+    e.dataTransfer.dropEffect = 'move';   
 }
 
 function dragenter_handler(e) {
@@ -41,5 +41,6 @@ function drop_handler(e) {
     // process only if data exists
     if(data)  {
         e.target.innerHTML += '<p> Added block: '+ data +'</p>'
+        draggedElement.parentNode.removeChild(draggedElement);
     }
 }
