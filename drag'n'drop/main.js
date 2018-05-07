@@ -8,9 +8,7 @@ function dragstart_handler(e) {
     e.dataTransfer.setData("text/plain", e.target.dataset.uid);
 
     // define allowed drag effects
-    e.dataTransfer.effectAllowed = 'moveLink';
-    // define default effect
-    e.dataTransfer.dropEffect = "move";
+    e.dataTransfer.effectAllowed = 'move';
     
     // set the image which will be shown during dragging
     e.dataTransfer.setDragImage(img, 40, 40);

@@ -15,14 +15,12 @@
         ondrop="drop_handler(event)"
         ondragenter="dragenter_handler(event)"
         ondragleave="dragleave_handler(event)">  - DROP ZONE - </div>
-    <div class="drag-list">
-        <div draggable="true" data-uid="48DG" 
-            ondragstart="dragstart_handler(event)"
-            ondragend="dragend_handler(event)">
+    <div class="drag-list" 
+        ondragstart="dragstart_handler(event)"
+        ondragend="dragend_handler(event)">
+        <div draggable="true" data-uid="48DG">
             Draggable block</div>
-        <div draggable="true" data-uid=33OP 
-            ondragstart="dragstart_handler(event)"
-            ondragend="dragend_handler(event)">
+        <div draggable="true" data-uid=33OP>
             Draggable block</div>
         <div draggable="false">
             Non-draggable block</div>
